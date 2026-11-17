@@ -1,0 +1,4 @@
+.header { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: rgba(15, 23, 42, .92); border-bottom: 1px solid #334155; }
+.logo { font-weight: 700; font-size: 1.2rem; }
+nav a { margin-left: 1.5rem; color: var(--text); }
+nav a:hover { color: var(--primary); }
