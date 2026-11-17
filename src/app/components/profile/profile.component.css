@@ -1,0 +1,9 @@
+.profile { padding-top: 5rem; }
+.hello { color: var(--primary); }
+h1 { font-size: 3rem; }
+.role { color: var(--accent); margin: .5rem 0 1rem; }
+.summary { max-width: 700px; color: var(--muted); margin-bottom: 2rem; }
+.groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+.group { background: var(--surface); padding: 1.2rem; border-radius: 12px; }
+.group h4 { margin-bottom: .8rem; }
+.contact { display: flex; gap: .8rem; }
