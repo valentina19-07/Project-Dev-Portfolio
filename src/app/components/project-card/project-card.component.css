@@ -1,0 +1,30 @@
+.card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  height: 100%;
+}
+
+.desc {
+  color: var(--muted);
+}
+
+h4 {
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+ul {
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.links {
+  margin-top: auto;
+  display: flex;
+  gap: 0.7rem;
+  padding-top: 0.8rem;
+}

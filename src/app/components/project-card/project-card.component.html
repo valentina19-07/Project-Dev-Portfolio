@@ -1,0 +1,30 @@
+<article class="card">
+  <h3>{{ project().name }}</h3>
+  <p class="desc">{{ project().description }}</p>
+  @if (project().technologies.length > 0) {
+    <h4>Tecnologías</h4>
+    <div class="tags">
+      @for (tech of project().technologies; track tech) {
+        <span class="tag">{{ tech }}</span>
+      }
+    </div>
+  }
+  @if (project().features.length > 0) {
+    <h4>Características</h4>
+    <ul>
+      @for (feature of project().features; track feature) {
+        <li>{{ feature }}</li>
+      }
+    </ul>
+  }
+  <div class="links">
+    @if (project().repoUrl) {
+      <a class="btn" [href]="project().repoUrl" target="_blank" rel="noopener">Repositorio</a>
+    }
+    @if (project().demoUrl) {
+      <a class="btn btn-outline" [href]="project().demoUrl" target="_blank" rel="noopener">
+        Ver aplicación
+      </a>
+    }
+  </div>
+</article>
