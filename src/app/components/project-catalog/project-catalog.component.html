@@ -1,0 +1,8 @@
+<section id="proyectos">
+  <h2>Catálogo de proyectos</h2>
+  <div class="grid">
+    @for (project of projects; track project.id) {
+      <app-project-card [project]="project" />
+    }
+  </div>
+</section>
