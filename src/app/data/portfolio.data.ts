@@ -25,6 +25,33 @@ export const PROFILE: Profile = {
   email: 'juan.vargas03@uceva.edu.co',
 };
 
+export const PROFILE_VALEN: Profile = {
+  fullName: 'Valentina Gonzales Mejia',
+  role: 'Estudiante de Ingeniería de Software',
+  summary:
+    'Estudiante de ingeniería apasionada por el desarrollo web, la arquitectura de software y la automatización de despliegues con CI/CD.',
+  skills: [
+    'Trabajo en equipo',
+    'Resolución de problemas',
+    'Git y GitHub',
+    'Pruebas unitarias',
+    'CI/CD',
+  ],
+  languages: ['TypeScript', 'JavaScript', 'Java', 'Python', 'SQL'],
+  technologies: [
+    'Angular',
+    'HTML5',
+    'CSS3',
+    'GitHub Actions',
+    'GitHub Pages',
+    'Node.js',
+  ],
+  github: 'https://github.com/valentina19-07',
+  email: '',
+};
+
+export const PROFILES: Profile[] = [PROFILE_VALEN, PROFILE];
+
 const pendingProjectMessage =
   'La información real de este proyecto se agregará cuando esté disponible.';
 

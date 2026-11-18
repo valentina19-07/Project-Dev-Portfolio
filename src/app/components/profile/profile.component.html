@@ -1,32 +1,38 @@
 <section id="perfil" class="profile">
-  <p class="hello">Hola, soy</p>
-  <h1>{{ profile.fullName }}</h1>
-  <h3 class="role">{{ profile.role }}</h3>
-  <p class="summary">{{ profile.summary }}</p>
+  @for (profile of profiles; track profile.fullName) {
+    <div class="person">
+      <p class="hello">Hola, soy</p>
+      <h1>{{ profile.fullName }}</h1>
+      <h3 class="role">{{ profile.role }}</h3>
+      <p class="summary">{{ profile.summary }}</p>
 
-  <div class="groups">
-    <div class="group">
-      <h4>Habilidades</h4>
-      <div class="tags">
-        @for (item of profile.skills; track item) { <span class="tag">{{ item }}</span> }
+      <div class="groups">
+        <div class="group">
+          <h4>Habilidades</h4>
+          <div class="tags">
+            @for (item of profile.skills; track item) { <span class="tag">{{ item }}</span> }
+          </div>
+        </div>
+        <div class="group">
+          <h4>Lenguajes de programación</h4>
+          <div class="tags">
+            @for (item of profile.languages; track item) { <span class="tag">{{ item }}</span> }
+          </div>
+        </div>
+        <div class="group">
+          <h4>Tecnologías</h4>
+          <div class="tags">
+            @for (item of profile.technologies; track item) { <span class="tag">{{ item }}</span> }
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="group">
-      <h4>Lenguajes de programación</h4>
-      <div class="tags">
-        @for (item of profile.languages; track item) { <span class="tag">{{ item }}</span> }
-      </div>
-    </div>
-    <div class="group">
-      <h4>Tecnologías</h4>
-      <div class="tags">
-        @for (item of profile.technologies; track item) { <span class="tag">{{ item }}</span> }
-      </div>
-    </div>
-  </div>
 
-  <div class="contact">
-    <a class="btn" [href]="profile.github" target="_blank" rel="noopener">GitHub</a>
-    <a class="btn btn-outline" [href]="'mailto:' + profile.email">Contacto</a>
-  </div>
+      <div class="contact">
+        <a class="btn" [href]="profile.github" target="_blank" rel="noopener">GitHub</a>
+        @if (profile.email) {
+          <a class="btn btn-outline" [href]="'mailto:' + profile.email">Contacto</a>
+        }
+      </div>
+    </div>
+  }
 </section>

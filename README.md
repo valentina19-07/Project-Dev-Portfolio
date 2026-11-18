@@ -6,7 +6,7 @@ Portafolio digital desarrollado con **Angular 19** para presentar cinco proyecto
 
 ## Funcionalidades
 
-- Perfil profesional de Juan Fernando Vargas con habilidades, lenguajes y tecnologías.
+- Perfiles profesionales de Juan Fernando Vargas y Valentina Gonzales Mejia con sus habilidades, lenguajes y tecnologías.
 - Catálogo de cinco proyectos con descripción, tecnologías y características.
 - Enlaces al repositorio y a la demo cuando están disponibles.
 - Los datos y enlaces de los proyectos 2–5 están pendientes de confirmación.

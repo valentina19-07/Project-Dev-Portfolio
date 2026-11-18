@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProfileComponent } from './profile.component';
-import { PROFILE } from '../../data/portfolio.data';
+import { PROFILES } from '../../data/portfolio.data';
 
 describe('ProfileComponent', () => {
   let fixture: ComponentFixture<ProfileComponent>;
@@ -11,14 +11,21 @@ describe('ProfileComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should show the full name', () => {
-    const h1: HTMLElement = fixture.nativeElement.querySelector('h1');
-    expect(h1.textContent).toContain(PROFILE.fullName);
+  it('should show one name per team member', () => {
+    const names: NodeListOf<HTMLElement> = fixture.nativeElement.querySelectorAll('h1');
+    expect(names.length).toBe(PROFILES.length);
+    expect(names[0].textContent).toContain(PROFILES[0].fullName);
   });
 
   it('should render one tag per skill, language and technology', () => {
-    const total = PROFILE.skills.length + PROFILE.languages.length + PROFILE.technologies.length;
+    const total = PROFILES.reduce(
+      (acc, profile) =>
+        acc +
+        profile.skills.length +
+        profile.languages.length +
+        profile.technologies.length,
+      0,
+    );
     expect(fixture.nativeElement.querySelectorAll('.tag').length).toBe(total);
   });
 });
-
