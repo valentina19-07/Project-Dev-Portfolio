@@ -47,7 +47,7 @@ export const PROFILE_VALEN: Profile = {
     'Node.js',
   ],
   github: 'https://github.com/valentina19-07',
-  email: '',
+  email: 'valentina.gonzalez06@uceva.edu.co',
 };
 
 export const PROFILES: Profile[] = [PROFILE_VALEN, PROFILE];
